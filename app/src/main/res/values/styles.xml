@@ -22,7 +22,6 @@
 
     <!-- Bitcoin View -->
     <style name="BitcoinView">
-        <item name="id">@+id/logoImage</item>
         <item name="android:src">@drawable/bitcoin_image</item>
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
@@ -41,7 +40,6 @@
 
     <!-- Base View -->
     <style name="BaseView">
-        <item name="id">@+id/textView</item>
         <item name="android:textStyle">bold</item>
         <item name="android:textSize">30sp</item>
         <item name="android:text">@string/base</item>
@@ -54,7 +52,6 @@
 
     <!-- Spinner View -->
     <style name="SpinView">
-        <item name="id">@+id/currency_spinner</item>
         <item name="android:dropDownSelector">@color/fontColour</item>
         <item name="android:spinnerMode">dropdown</item>
         <item name="android:gravity">center_horizontal</item>

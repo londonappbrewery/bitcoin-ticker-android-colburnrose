@@ -17,7 +17,8 @@
 
 
     <ImageView
-        style="@style/BitcoinView"/>
+        style="@style/BitcoinView"
+        android:id="@+id/logoImage"/>
 
     <LinearLayout
         style="@style/LinearLayout"
@@ -25,10 +26,12 @@
 
         <TextView
             style="@style/BaseView"
+            android:id="@+id/textView"
             android:textAppearance="?android:attr/textAppearanceLarge"/>
 
         <Spinner
-            style="@style/SpinView"/>
+            style="@style/SpinView"
+            android:id="@+id/currency_spinner"/>
 
 
     </LinearLayout>
