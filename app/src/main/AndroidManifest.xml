@@ -2,6 +2,8 @@
 <manifest package="com.londonappbrewery.bitcointicker"
           xmlns:android="http://schemas.android.com/apk/res/android">
 
+    //add app permissions to access the internet (android api documentation)
+    <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
         android:allowBackup="true"
