@@ -12,52 +12,23 @@
     tools:context="com.londonappbrewery.bitcointicker.MainActivity">
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/label_default_text"
-        android:id="@+id/priceLabel"
-        android:textSize="45sp"
-        android:textStyle="bold"
-        android:textColor="@color/fontColour"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"/>
+        style="@style/PriceView"
+        android:id="@+id/priceLabel"/>
+
 
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/logoImage"
-        android:contentDescription="@string/imageview_desc"
-        android:src="@drawable/bitcoin_image"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"/>
+        style="@style/BitcoinView"/>
 
     <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@+id/priceLabel"
-        android:gravity="center_vertical|center_horizontal">
+        style="@style/LinearLayout"
+        android:layout_below="@+id/priceLabel">
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="@string/base"
-            android:textSize="30sp"
-            android:textStyle="bold"
-            android:id="@+id/textView"
-            android:layout_gravity="center_vertical"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"/>
+            style="@style/BaseView"
+            android:textAppearance="?android:attr/textAppearanceLarge"/>
 
         <Spinner
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/currency_spinner"
-            android:gravity="center_horizontal"
-            android:spinnerMode="dropdown"
-            android:dropDownSelector="@color/fontColour"
-            />
+            style="@style/SpinView"/>
 
 
     </LinearLayout>
