@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
 
     // Constants:
     // TODO: Create the base URL
-    private final String BASE_URL = "https://apiv2.bitcoinaverage.com/indices/market/ticker/BTCUSD"; //per symbol ticker data.
+    private final String BASE_URL = "https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCUSD"; //per symbol ticker data
 
     // Member Variables:
     TextView mPriceTextView;
@@ -43,8 +43,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 Log.d("Bitcoin", "" + parent.getItemAtPosition(position));
-                /*Spinner spinner = (Spinner) findViewById(R.id.currency_spinner);
-                spinner.setOnItemSelectedListener(this);*/
+                Spinner spinner = (Spinner) findViewById(R.id.currency_spinner);
+                spinner.setOnItemSelectedListener(this);
             }
 
             @Override
