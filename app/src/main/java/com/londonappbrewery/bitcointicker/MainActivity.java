@@ -36,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
     private final String USD_URL = "https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCUSD";
     private final String ZAR_URL = "https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCZAR";
 
+    private final String[] BTC = {"AUD_URL", "BRL_URL", "CAD_URL", "CNY_URL", "EUR_URL", "GPB_URL", "HKD_URL", "JPY_URL", "PLN_URL", "RUB_URL", "SEK_URL", "USD_URL", "ZAR_URL"};
     // Member Variables:
     TextView mPriceTextView;
 
@@ -62,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 Log.d("Bitcoin", "" + parent.getItemAtPosition(position));
-                letsDoSomeNetworking(AUD_URL);
+                letsDoSomeNetworking(BTC[position]);
 
             }
 
@@ -83,6 +84,8 @@ public class MainActivity extends AppCompatActivity {
             public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
                 // called when response HTTP status is "200 OK"
                 Log.d("Bitcoin", "JSON: " + response.toString());
+                BitcoinDataModel bitcoinDataModel = BitcoinDataModel.fromJson(response);
+                mPriceTextView.setText(bitcoinDataModel.getCoin());
 
             }
 
@@ -95,6 +98,7 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+
 
 
     }
